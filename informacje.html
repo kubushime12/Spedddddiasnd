@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpeedSphereSeries</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png" type="image/png">
+ 
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo">SpeedSphereSeries</a>
+    <nav>
+      <a href="index.html" class="btn-header">Strona Główna</a>
+      <a href="kalendarz.html" class="btn-header">Kalendarz</a>
+      <a href="zapisy.html" class="btn-nav">Zapisy</a>
+      <a href="klasyfikacja.html" class="btn-nav">Klasyfikacja</a>
+      <a href="film.html" class="btn-nav">Trailer</a>
+    </nav>
+  </header>
+
+  <!-- Sekcja FAQ -->
+  <section class="faq-section">
+    <h2>Najważniejsze na start!</h2>
+    
+    <div class="faq-container">
+      <div class="faq-item">
+        <button class="faq-question">Kim jesteśmy?<span class="arrow">▼</span></button>
+        <div class="faq-answer">
+          <p>Jesteśmy amatorską ligą w grach F1. Tworzymy społeczność, w której poczujesz się jak w domu! ❤️</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Jak mogę dołączyć?<span class="arrow">▼</span></button>
+        <div class="faq-answer">
+          <p>Aby dołączyć, dołącz na naszego <a href="https://discord.gg/GsdWMadC"> discorda</a>, lub zapisz sie poprzez zakłądkę <a href="zapisy.html">Zapisy</a> .</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Jakie są zasady ligi?<span class="arrow">▼</span></button>
+        <div class="faq-answer">
+          <p>Pełen regulamin nie jest jeszcze gotowy lecz zostanie udostępniony wkrtóce.</p><!-- <a href="regulamin.html">tutaj</a>.</p>-->
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Kiedy odbywają się wyścigi?<span class="arrow">▼</span></button>
+        <div class="faq-answer">
+          <p>Harmonogram wyścigów dostępny jest w <a href="kalendarz.html">kalendarzu</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>&copy; 2025 SpeedSphereSeries. Wszelkie prawa zastrzeżone.</footer>
+
+  <script>
+    document.querySelectorAll(".faq-question").forEach(button => {
+      button.addEventListener("click", () => {
+        const answer = button.nextElementSibling;
+        const arrow = button.querySelector(".arrow");
+
+        if (answer.style.maxHeight) {
+          answer.style.maxHeight = null;
+          arrow.textContent = "▼";
+        } else {
+          answer.style.maxHeight = answer.scrollHeight + "px";
+          arrow.textContent = "▲";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
